@@ -1,0 +1,19 @@
+{
+  "uuid": "97148734-9be4-4d6b-b2e4-f5bdc05c81b3",
+  "shortName": "24hOfColor",
+  "longName": "24 Hours of Color",
+  "companyName": "roguelazer",
+  "versionLabel": "0.1",
+  "sdkVersion": "3",
+  "targetPlatforms": ["aplite", "basalt", "chalk"],
+  "enableMultiJS": true,
+  "projectType": "native",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+  },
+  "resources": {
+    "media": []
+  }
+}
