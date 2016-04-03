@@ -78,7 +78,6 @@ void update_window_color()
 		GColorArmyGreen,
 	};
 
-	srand(0);
 	int array_offset = rand() % sizeof(colors);
 	s_background_color = COLOR_FALLBACK(colors[array_offset], GColorWhite);
 	window_set_background_color(s_main_window, s_background_color);
@@ -90,7 +89,6 @@ void update_window_color()
 
 void draw_face_layer(Layer* l, GContext* ctx)
 {
-	APP_LOG(APP_LOG_LEVEL_DEBUG, "Drawing face layer");
 	GColor foreground_color = gcolor_legible_over(s_background_color);
 	GRect bounds = layer_get_frame(l);
 	GPoint center = GPoint(bounds.size.w / 2, bounds.size.h / 2);
@@ -202,7 +200,7 @@ static void main_window_load(Window *window)
 	Layer *window_layer = window_get_root_layer(window);
 	GRect bounds = layer_get_frame(window_layer);
 
-	s_time_font = fonts_get_system_font(FONT_KEY_LECO_20_BOLD_NUMBERS);
+	s_time_font = fonts_get_system_font(FONT_KEY_GOTHIC_18_BOLD);
 
 	s_face = layer_create(bounds);
 	layer_set_update_proc(s_face, draw_face_layer);
